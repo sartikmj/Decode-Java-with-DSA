@@ -2,6 +2,7 @@ package OOPS.Variables;
 
 class Calculator{
     public void add(int a, int b){
+        //local variable
         int result = a+b;
         System.out.println("Sum is: "+result);
     }

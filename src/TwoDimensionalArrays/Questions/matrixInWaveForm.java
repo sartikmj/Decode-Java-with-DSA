@@ -2,6 +2,8 @@ package TwoDimensionalArrays.Questions;
 
 public class matrixInWaveForm {
 //     Write a program to Print the matrix in Waveform.
+
+//    ek row seedhe and ek reverse me 0th 2nd and even number of rows direct and odd ones in reverse to print
     public static void Waveform(int[][] arr){
         int m = arr.length, n = arr[0].length;
         transformIntoTranspose.print(arr);
