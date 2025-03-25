@@ -1,10 +1,4 @@
-package Stack.Implementation;
-
-class Stack {
-    int[] arr = new int[5];
-
-
-}
+package Stack.Implementation.ArrayImplementation;
 
 public class ArrayImplementation {
     // Array / ArrayList Implementation
@@ -31,7 +25,7 @@ public class ArrayImplementation {
 
         void display(){
             for(int i=0;i<=idx-1;i++){
-                System.out.println(arr[i]);
+                System.out.print(arr[i]+" ");
             }
         }
 
@@ -48,7 +42,7 @@ public class ArrayImplementation {
         }
 
         int pop(){
-            if(isEmpty()){
+            if(isEmpty()){ //can also use size==0
                 System.out.println("Stack is empty");
                 return -1;
             }
