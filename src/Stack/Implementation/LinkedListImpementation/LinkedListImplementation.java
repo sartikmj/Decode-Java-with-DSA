@@ -1,4 +1,4 @@
-package Stack.Implementation.StackImpementation;
+package Stack.Implementation.LinkedListImpementation;
 
 public class LinkedListImplementation {
 
