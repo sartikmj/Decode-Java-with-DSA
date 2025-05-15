@@ -11,6 +11,8 @@ public class LinkedListImplementation {
         }
     }
 
+//    the topmost Element in the Stack is the head of the LL
+
     public static class Stack {
         Node head = null;
         int size = 0;
