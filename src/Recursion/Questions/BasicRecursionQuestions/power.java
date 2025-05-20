@@ -9,6 +9,7 @@ public class power {
         //Time Complexity = O(b);
     }
 
+    //Better Approach
     public static int powerLog(int a,int b){
         if(b==0) return 1;
         int ans = powerLog(a,b-1);
