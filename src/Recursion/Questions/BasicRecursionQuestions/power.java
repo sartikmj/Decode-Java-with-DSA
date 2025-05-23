@@ -12,9 +12,9 @@ public class power {
     //Better Approach
     public static int powerLog(int a,int b){
         if(b==0) return 1;
-        int ans = powerLog(a,b-1);
-        if(b%2==0) return ans*ans;
-        else return ans*ans*a;
+        int ans = powerLog(a,b/2);
+        if(b%2==0) return ans*ans; //for even power
+        else return ans*ans*a; //for odd power
 
         // TC = O(log b)
     }

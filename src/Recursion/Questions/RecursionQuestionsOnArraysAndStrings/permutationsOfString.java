@@ -3,7 +3,7 @@ package Recursion.Questions.RecursionQuestionsOnArraysAndStrings;
 public class permutationsOfString {
 //    Find all the permutations of a string given all elements of the string are unique
 
-    //for a string of length n , there are n! permutations
+    //for a string of length n, there are n! permutations
 
     public static void printPermutations(String ans , String s){
         if(s.length() == 0){

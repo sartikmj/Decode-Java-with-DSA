@@ -3,12 +3,14 @@ package Recursion.Questions.BasicRecursionQuestions;
 import java.util.Scanner;
 
 public class mazePath {
+//    Ques: you are at starting index of the grid and you have to reach the final index of grid, find number of ways to reach the final index
+//    you can either go right or down.
     public static int maze(int row, int col, int m , int n) { // row and col are starting coordinates , m and n are final coordinates
-        if(row==n || col==n) return 1; //Base case , when reach at last row or last col
+        if(row==m || col==n) return 1; //Base case , when reach at last row or last col
 //        // OR we can use this base case , more professional :
-//        if(row == m && col == n) return 1;
-//        if(row>m || col>n) return 0;
-        int rightWays = maze(row,col+1,n,n); //ek baar right chala gaya to kitne number of ways aayenge
+//        if(row == m && col == n) return 1; //reached the final index
+//        if(row>m || col>n) return 0;//got out of maze
+        int rightWays = maze(row,col+1,m,n); //ek baar right chala gaya to kitne number of ways aayenge
         int downWays = maze(row+1,col,m,n);
         return rightWays + downWays;
     }
