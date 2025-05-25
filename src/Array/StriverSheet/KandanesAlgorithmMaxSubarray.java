@@ -3,8 +3,8 @@ package Array.StriverSheet;
 public class KandanesAlgorithmMaxSubarray {
 
     //Optimal Approach --> Kandane's Algorithm
-    //if sum get negative reduce the sum to 0 , and leave that element
-    //if the sum is positive , carry that sum forward till end of array until it is positive
+    //if sum gets negative, reduce the sum to 0, and leave that element
+    //if the sum is positive, carry that sum forward till the end of the array until it is positive
     //do this all while maintaining maxSum.
 
 //    TC=O(N) SC=O(1)
@@ -23,6 +23,7 @@ public class KandanesAlgorithmMaxSubarray {
         }
         //in case they say give max sum including empty subarray , i.e. if max sum in array is negative , return 0 as it is the sum of empty subarray []
         if(max<0) return 0;
+
         return max;
     }
 
