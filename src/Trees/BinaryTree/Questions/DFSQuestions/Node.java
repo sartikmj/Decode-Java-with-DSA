@@ -1,4 +1,4 @@
-package Trees.BinaryTree.Traversals;
+package Trees.BinaryTree.Questions.DFSQuestions;
 
 public class Node {
     int val;

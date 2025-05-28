@@ -1,4 +1,4 @@
-package Trees.BinaryTree.Questions;
+package Trees.BinaryTree.Traversals.BreadthFirstSearch;
 
 public class Node {
     int val;

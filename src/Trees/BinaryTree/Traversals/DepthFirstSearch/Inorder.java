@@ -1,4 +1,4 @@
-package Trees.BinaryTree.Traversals;
+package Trees.BinaryTree.Traversals.DepthFirstSearch;
 import java.util.ArrayList;
 import java.util.List;
 

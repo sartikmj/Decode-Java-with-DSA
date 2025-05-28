@@ -1,5 +1,8 @@
 package Trees.BinaryTree.Traversals;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Traversals {
 
     public static void preorder(Node root){
@@ -23,6 +26,17 @@ public class Traversals {
         System.out.print(root.val+" ");
     }
 
+    public static void levelOrder(Node root){
+        Queue<Node> q = new LinkedList<>();
+        if (root != null) q.add(root);
+        while (!q.isEmpty()) {
+            Node front = q.poll();
+            System.out.print(front.val + " ");
+            if (front.left != null) q.add(front.left);
+            if (front.right != null) q.add(front.right);
+        }
+    }
+
     public static void main(String[] args) {
         Node a = new Node(1); //a is the root
         Node b = new Node(2);
@@ -37,6 +51,7 @@ public class Traversals {
         b.left = d; b.right = e;
         c.left = f;
         c.right = g;
+        g.right = h;
 
         System.out.print("Preorder: ");
         preorder(a);
@@ -46,6 +61,9 @@ public class Traversals {
         System.out.println();
         System.out.print("Postorder: ");
         postorder(a);
-
+        System.out.println();
+        System.out.print("LevelOrder: ");
+        levelOrder(a);
+        System.out.println();
     }
 }
