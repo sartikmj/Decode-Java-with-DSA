@@ -14,20 +14,22 @@ public class subset {
 
     static ArrayList<String> arr = new ArrayList<>(); //globally declared
 
-    public static void subsetString(int i , String s, String ans){
+    public static void subsetString(int i , String s, String ans, ArrayList<String> arr){
         if(i==s.length()){
 //            String is Pass by Value
             arr.add(ans); // OR you can print it directly , sout(ans);
             return;
         }
-        subsetString(i+1,s,ans); //not take
-        subsetString(i+1,s,ans+=s.charAt(i)); //take
+        subsetString(i+1,s,ans,arr); //not take
+        subsetString(i+1,s,ans+=s.charAt(i),arr); //take
     }
 
 //    Time Complexity = O(2^n)
 
 //    Subset of Arrays
 //    leetcode 78
+
+    //Without globally scoped is on leetcode latest submission
     static List<List<Integer>> arrr = new ArrayList<>(); //globally declared to store all the subsets
     public static void subsetArray(int i, int[] nums, List<Integer> ans){
         if(i==nums.length){
@@ -38,17 +40,17 @@ public class subset {
             arrr.add(list);
             return;
         }
-        subsetArray(i+1,nums,ans);
-        ans.add(nums[i]);
-        subsetArray(i+1,nums,ans);
-        ans.remove(ans.size()-1);
+        subsetArray(i+1,nums,ans); // not take
+        ans.add(nums[i]); // adding the element
+        subsetArray(i+1,nums,ans); // take
+        ans.remove(ans.size()-1); // remove the element we add.
     }
 
     public static void main(String[] args) {
-//        String s = "abcd";
-//        arr = new ArrayList<>(); // reset ArrayList, beneficial in case when multiple test cases run on it, use it when something is Global
-//        subsetString(0,s,"");
-//        System.out.println(arr);
+        String s = "abcd";
+        ArrayList<String> arr = new ArrayList<>();
+        subsetString(0,s,"",arr);
+        System.out.println(arr);
 
         int[] nums = {1,2,3};
         ArrayList<Integer> ans = new ArrayList<>();

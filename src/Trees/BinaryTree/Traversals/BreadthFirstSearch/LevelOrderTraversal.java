@@ -26,7 +26,7 @@ public class LevelOrderTraversal {
         while (!q.isEmpty()) {
             Node front = q.poll();
             System.out.print(front.val + " ");
-            if (front.right != null) q.add(front.right);
+            if (front.right != null) q.add(front.right); //these two lines interchanged
             if (front.left != null) q.add(front.left);
         }
     }
