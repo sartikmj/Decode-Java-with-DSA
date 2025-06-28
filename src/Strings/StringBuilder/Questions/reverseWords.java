@@ -13,7 +13,7 @@ public class reverseWords {
                 j=i;
             }
         }
-        reverse(sb,i,j-1); //to reverse the last word , bcz loop ends before reversing last word , so we have to do it explicitly
+        reverse(sb,i,j-1); //to reverse the last word, bcz loop ends before reversing last word , so we have to do it explicitly
 
         System.out.println(sb);
     }

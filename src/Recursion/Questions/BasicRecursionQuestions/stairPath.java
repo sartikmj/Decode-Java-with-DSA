@@ -16,7 +16,7 @@ public class stairPath {
 //  formula: waysToClimb(n) = waysToClimb(n-1) + waysToCLimb(n-2) , as at once can only jump 1 or 2 stairs so n-1 and n-2 stairs left
 
     public static int stairs(int n){
-        if(n==0 || n==1 || n==2) return n; //OR if(n<=2)
+        if(n==1 || n==2) return n; //OR if(n<=2)
         return stairs(n-1) + stairs(n-2);
     }
     public static void main(String[] args) {
