@@ -1,5 +1,12 @@
 package TwoDimensionalArrays.Questions;
 
+// In case you just want to print the matrix in 90 degree rotated
+// for(int i=0;i<n;i++){
+//  for(int j=n-1:n>0;j--){
+//      sout(arr[i][j]);
+//  }
+// }
+//
 public class rotateMatrixBy90Degree {
 // Write a program to rotate the matrix by 90 Degree (in same array , not allowed to use different array)
 

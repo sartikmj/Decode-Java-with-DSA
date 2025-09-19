@@ -25,7 +25,7 @@ public class ReverseLL {
 
 //  TC = O(n) , Extra Space = O(n) -> this space is of call stack. <------IMPORTANT------
     public static ListNode reverseRecursive(ListNode head){
-        //edge cases
+        //base cases
         if(head == null || head.next == null) return head;
         ListNode a = head.next;
         //Magic of recursion ->rec will reverse by itself
