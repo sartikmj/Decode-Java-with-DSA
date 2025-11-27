@@ -3,6 +3,9 @@ package BasicSortingAlgorithms.InsertionSort;
 import BasicSortingAlgorithms.BubbleSort.BubbleSort;
 
 public class InsertionSort {
+
+    //har ek element ko uthao or jab tk arr[i-1] > arr[i] na ho use left m swap krte raho
+
     public static void main(String[] args) {
         int[] arr = {10,-4,20,78,-6,8};
         int n = arr.length;
@@ -22,7 +25,7 @@ public class InsertionSort {
         BubbleSort.print(arr);
 
 
-        //Another way to write Bubble Sort
+        //Another way to write Insertion Sort
 
         for(int i =1;i<n;i++){
             int j=i;
