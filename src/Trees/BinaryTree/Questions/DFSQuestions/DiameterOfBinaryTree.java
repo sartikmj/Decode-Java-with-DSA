@@ -8,7 +8,7 @@ public class DiameterOfBinaryTree {
 //    so we can say:
 //    diameter = levels of LST + levels of RST
 
-//    We will find the diameter with every Node taken as root, the one with mex value will be our diameter.
+//    We will find the diameter with every Node taken as root, the one with max value will be our diameter.
 //    Taking a node as root means that the diameter i.e., the longest path will pass through that Node and reverse
 //    from there
 
@@ -17,7 +17,7 @@ public class DiameterOfBinaryTree {
     //    Brute Force
     public int levels1(Node root) {
         if (root == null) return 0;
-        return 1 + Math.max(levels1(root.left), levels1(root.right));
+        return 1 + Math.max(levels1(root.left), levels1(root.right)); // root + max of left or right nodes
     }
 
     public int diameterOfBinaryTree1(Node root) {

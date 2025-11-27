@@ -3,6 +3,10 @@ package BasicSortingAlgorithms.SelectionSort;
 import java.util.Arrays;
 
 public class SelectionSort {
+
+    // put one pointer on i then in the entire array left to i find the min and swap it with i thats it,
+    // we need both min Value and min index.
+
     public static void main(String[] args) {
         int[] arr = {10,-4,20,1,-6,8};
         System.out.println(Arrays.toString(arr));

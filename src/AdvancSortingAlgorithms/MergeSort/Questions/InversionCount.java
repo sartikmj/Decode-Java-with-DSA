@@ -1,8 +1,7 @@
-package AdvancSortingAlgorithms.Questions;
+package AdvancSortingAlgorithms.MergeSort.Questions;
 
 import java.util.Arrays;
 
-import static AdvancSortingAlgorithms.MergeSort.mergeSort;
 //BHAI YE TO BAWAAL HAI :->
 public class InversionCount {
 //Problem Statement: Given an array of N integers, count the inversion of the array (using merge-sort).

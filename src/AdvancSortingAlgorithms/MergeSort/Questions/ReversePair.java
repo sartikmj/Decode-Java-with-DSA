@@ -1,4 +1,4 @@
-package AdvancSortingAlgorithms.Questions;
+package AdvancSortingAlgorithms.MergeSort.Questions;
 
 //leetcode 493 Hard
 

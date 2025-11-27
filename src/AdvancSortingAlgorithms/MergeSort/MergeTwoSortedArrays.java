@@ -1,4 +1,4 @@
-package AdvancSortingAlgorithms;
+package AdvancSortingAlgorithms.MergeSort;
 
 public class MergeTwoSortedArrays {
     public static void print(int[] arr) {
