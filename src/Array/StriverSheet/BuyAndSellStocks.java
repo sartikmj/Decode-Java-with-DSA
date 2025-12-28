@@ -2,15 +2,31 @@ package Array.StriverSheet;
 
 public class BuyAndSellStocks {
 
-    // Fore every element , find it's previous Minimum Element
-    public static int buyAndSellStocks(int[] prices) {
-        int min = prices[0];
+    // TC=O(n^2)
+    public int buyAndSellStocks1(int prices[]) {
+        // Code here
         int maxProfit = 0;
-        for(int i=1;i<prices.length;i++){
-            int cost = prices[i]-min;
-            maxProfit = Math.max(maxProfit,cost);
-            min = Math.min(min,prices[i]);
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                int profit = prices[j] - prices[i];
+                maxProfit = Math.max(maxProfit, profit);
+            }
         }
         return maxProfit;
     }
+
+
+    //Optimal TC=O(n)
+    public static int buyAndSellStocks(int[] prices) {
+        int minPrice = prices[0];
+        int maxProfit = 0;
+
+        for (int i = 1; i < prices.length; i++) {
+            minPrice = Math.min(minPrice, prices[i]);
+
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+        }
+        return maxProfit;
+    }
+
 }

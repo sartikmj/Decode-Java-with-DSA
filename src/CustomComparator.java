@@ -13,7 +13,7 @@ class Student implements Comparable<Student>{ //inside <> give your class name
 
     //make this method-> compareTo
     public int compareTo(Student s){
-        return this.rno-s.rno; //means two students are compared on the basis of rno.
+        return this.rno-s.rno; //means two students are compared on the basis of rno. (Ascending Order)
 
         //to compare wrt any other data type you have to typecast it into Integer first
 //        return (int)(this.perc - s.perc);
@@ -42,7 +42,7 @@ public class CustomComparator {
         s[2] = new Student(99,88,"Himanshu");
         s[3] = new Student(79,73,"Nishant");
         print(s);
-        Arrays.sort(s); //give error bcz sort does not know on what basis it should sort, as array contains Object
+        Arrays.sort(s); //Without Custom Comparator , it will give error bcz sort does not know on what basis it should sort, as array contains Object
         print(s);
     }
 }

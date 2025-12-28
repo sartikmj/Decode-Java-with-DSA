@@ -1,13 +1,17 @@
-package Recursion.Questions.RecursionQuestionsOnArraysAndStrings;
+package Backtracking;
 
-public class permutationsOfString {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PermutationsOfString {
+
 //    Find all the permutations of a string given all elements of the string are unique
 
     //for a string of length n, there are n! permutations
 //    TC=0(n!)
-    public static void printPermutations(String ans , String s){
+    public static void printPermutations(String ans , String s, List<String> list){
         if(s.length() == 0){ // OR s.equals("")
-            System.out.println(ans);
+            list.add(ans);
             return;
         }
         for(int i=0;i<s.length();i++){ //jitni string ki length hai utni baar call lagegi function ko
@@ -17,7 +21,7 @@ public class permutationsOfString {
             String right = s.substring(i+1); // i+1 to end
 //            String rem = left + right; //remaining string
 
-            printPermutations(ans+ch,left+right); //update the ans and the string left after taking out the character
+            printPermutations(ans+ch,left+right,list); //update the ans and the string left after taking out the character
         }
     }
 
@@ -25,6 +29,8 @@ public class permutationsOfString {
 
     public static void main(String[] args) {
         String s = "abcd";
-        printPermutations("",s);
+        List<String> list = new ArrayList<String>();
+        printPermutations("",s,list);
+        System.out.println(list);
     }
 }
