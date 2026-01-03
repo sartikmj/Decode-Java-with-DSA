@@ -15,7 +15,7 @@ public class OptimizedBubbleSort {
         print(arr);
         for (int x = 0; x < n - 1; x++) { // Same thing
             boolean flag = true;
-            for (int i = 0; i < n - 1 - x; i++) { // inner looop will run till n-1-x times
+            for (int i = 0; i < n - 1 - x; i++) { // inner loop will run till n-1-x times
                 if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
