@@ -26,7 +26,7 @@ public class scoreAfterFlippingMatrix {
                 }
             }
             //Now every row first element is 1
-            //So we don't have to flop row anymore
+            //So we don't have to flip row anymore
 
         }
         //Now we will flip column
@@ -34,7 +34,7 @@ public class scoreAfterFlippingMatrix {
         //STEP-2-> We will flip that column where number of 0s are more than the number of 1s.
         // now we will check each column except 0th bcz its every element is 1.
 
-        //column traversel of matrix
+        //column traversal of matrix
         for (int j = 1; j < n; j++) {
             int noOfZeroes = 0;
             int noOfOnes = 0;

@@ -2,7 +2,7 @@ package TwoDimensionalArrays.Questions;
 
 public class setMatrixZero {
     // leetcode 73
-    // Given an mxn integer matrix, if an element is 0 , set its entire row and col to 0's
+    // Given an mxn integer matrix, if an element is 0, set its entire row and col to 0's
 
     //Best way to do
     //Using constant extra space
@@ -49,7 +49,7 @@ public class setMatrixZero {
             }
         }
 
-        //set the marked row to zero ,  traverse in the 0th col
+        //set the marked row to zero,  traverse in the 0th col
         for(int i=1;i<matrix.length;i++){
             if(matrix[i][0] == 0){ //set the i th row to zero
                 for(int j=1;j<matrix[0].length;j++){
