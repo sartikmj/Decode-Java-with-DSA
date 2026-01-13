@@ -1,6 +1,7 @@
 package BitManipulation.Questions.BitMasking;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 //leetcode 136
 public class SingleNumber {
@@ -16,11 +17,24 @@ public class SingleNumber {
         for(int i=0;i<nums.length-1;i+=2){
             if(nums[i]!=nums[i+1]) return nums[i];
         }
+        //if no element found it means the last number is the single number
         return nums[nums.length-1];
     }
 
     //Better Method - 2 TC=O(n) AS=O(n)
     // Using HashMap make a freq map and return the key with 1 value
+    public int singleNumber2(int[] arr) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int i : arr){
+            map.put(i, map.getOrDefault(i,0)+1);
+        }
+
+        for(int i : map.keySet()){
+            if(map.get(i)==1) return i;
+        }
+        return 0;
+    }
 
     //Optimal
     //Using Bit Manipulation
