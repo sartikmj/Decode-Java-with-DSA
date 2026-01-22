@@ -38,4 +38,25 @@ public class ValidParenthesis {
         else return false;
 
     }
+
+    //Better and Easier Way
+    public boolean isValid1(String s) {
+        Stack<Character> st = new Stack<>();
+
+        for(char c : s.toCharArray()){
+            if(c=='('){
+                st.push(')');
+            }
+            else if(c=='{'){
+                st.push('}');
+            }
+            else if(c=='['){
+                st.push(']');
+            }
+            else if(st.isEmpty() || st.pop()!=c){
+                return false;
+            }
+        }
+        return st.isEmpty(); //if stack is empty it's balanced
+    }
 }
