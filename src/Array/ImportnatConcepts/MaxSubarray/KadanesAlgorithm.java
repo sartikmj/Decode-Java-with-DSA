@@ -1,4 +1,4 @@
-package Array.ImportnatConcepts.PrintAllPermutations.MaxSubarray;
+package Array.ImportnatConcepts.MaxSubarray;
 
 public class KadanesAlgorithm {
 
