@@ -1,13 +1,14 @@
 package Graph.BFS;
 
-// Used on Directed Acyclic Graph
-
-// Topological Sort using BFS -> Kahn's Algorithm
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+
+// Used on Directed Acyclic Graph
+
+// Topological Sort using BFS -> Kahn's Algorithm
 
 public class TopologicalSort {
 
