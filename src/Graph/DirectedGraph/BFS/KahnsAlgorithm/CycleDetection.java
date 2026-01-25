@@ -1,4 +1,4 @@
-package Graph.DirectedGraph.BFS;
+package Graph.DirectedGraph.BFS.KahnsAlgorithm;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

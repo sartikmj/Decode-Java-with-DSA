@@ -1,4 +1,4 @@
-package Graph.DirectedGraph.BFS;
+package Graph.DirectedGraph.BFS.KahnsAlgorithm;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -7,6 +7,7 @@ import java.util.Queue;
 
 //leetcode 207
 public class CourseSchedule {
+    //Based on Kahn's Algo
 
     //Cleaner Code
 
