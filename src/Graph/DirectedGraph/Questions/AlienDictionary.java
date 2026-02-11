@@ -8,6 +8,8 @@ public class AlienDictionary {
 
     // We will try to make a directed graph
 
+    //Can improve the code for not possible to find the order, or invalid dict, or has cycle in the graph we made
+
     class Solution {
         public String findOrder(int k,String[] words) {
             // code here
