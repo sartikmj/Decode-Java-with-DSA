@@ -54,6 +54,7 @@ public class NumberOfIslandsAllDirections {
         }
     }
 
+//  TC=O(N^2), SC=O(N^2)
     public int countIslands(char[][] grid) {
         // Code here
         int n = grid.length;
