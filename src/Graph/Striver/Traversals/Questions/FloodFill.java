@@ -6,8 +6,11 @@ import java.util.LinkedList;
 //leetcode 733
 public class FloodFill {
 
+// For both BFS and DFS TC = O(n x m) and SC = O(n x m)
+//    Although DFS is slightly faster than BFS
 
     // BY ME AND CHATGPT
+    // Using BFS
     static class Pair{
         int row;
         int col;
@@ -64,5 +67,43 @@ public class FloodFill {
         return image;
     }
 
+    // Using DFS by Striver
+
+    public static void dfs(int row, int col, int[][] ans, int[][] image, int color, int[] drow, int[] dcol, int ogColor){
+        // coloring the cell
+        ans[row][col] = color;
+
+        int n = image.length;
+        int m = image[0].length;
+
+        for(int i=0;i<4;i++){
+            int nrow = row + drow[i];
+            int ncol = col + dcol[i];
+
+            // validity, checking if it has the same color as og color, checking if it is not already have the new color
+            if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && image[nrow][ncol]==ogColor && ans[nrow][ncol] != color){
+                dfs(nrow, ncol, ans, image, color, drow, dcol, ogColor);
+            }
+        }
+    }
+
+    // instead of making new ans array you can just change in the image array like in bfs
+    public int[][] floodFill2(int[][] image, int sr, int sc, int color) {
+        int ogColor  = image[sr][sc];
+        int[][] ans = new int[image.length][image[0].length];
+        for(int i = 0; i < image.length; i++){
+            for(int j = 0; j < image[0].length; j++){
+                ans[i][j] = image[i][j];
+            }
+        }
+
+
+        int[] drow = {-1, 0, 1, 0};
+        int[] dcol = {0, 1, 0, -1};
+
+        dfs(sr, sc, ans, image, color, drow, dcol, ogColor);
+
+        return ans;
+    }
 
 }
