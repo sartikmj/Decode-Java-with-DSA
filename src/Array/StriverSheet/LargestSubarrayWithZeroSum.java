@@ -35,7 +35,7 @@ public class LargestSubarrayWithZeroSum {
             if(sum==0) maxLen = Math.max(maxLen,i+1); //till index i, length is i+1
             //if zero appears for first time you still want to store it in the map
             if(map.containsKey(sum)){
-                int len = i - map.get(sum);
+                int len = i - map.get(sum); // not +1, bcz the subarray start from map.get(sum) + 1 index (imp remember)
                 maxLen = Math.max(maxLen,len);
             }
             else{
