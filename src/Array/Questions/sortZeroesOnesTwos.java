@@ -3,9 +3,9 @@ package Array.Questions;
 public class sortZeroesOnesTwos {
     // This questions also known as Sort Colors and Dutch Flag Algorithm
 
-    //Method 1 : Two Pass
-    //1. Count the number of 0s , 1s and 2s
-    //2. Update the array first indexes with 0s , 1s and then 2s
+    //Method 1: Two Pass
+    //1. Count the number of 0s, 1s and 2s
+    //2. Update the array first indexes with 0s, 1s and then 2s
     //3. make sure the if conditions in the 2nd loop are correct from
 
     public static void Method1(int[] arr){
@@ -29,7 +29,7 @@ public class sortZeroesOnesTwos {
         //2nd-> low to mid-1 => contains ones
         //3rd-> mid to high => can contain anything [Unsorted Part]
         //4th-> high+1 to len-1 =< contains twos
-    //3. if mid = 0, Compare the index mid element with index low , swap it with low as low contains 1 ,
+    //3. if mid = 0, Compare the index mid element with index low, swap it with low as low contains 1,
         //->increase low by one index bcz all Zeroes are before low , increase mid by one index as all Ones are before mid.
     //5. if mid=1 , just mid++
     //6. if mid=2 , swap it with high bcz all the two comes after high ,

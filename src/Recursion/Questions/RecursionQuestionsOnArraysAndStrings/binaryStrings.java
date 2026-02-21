@@ -11,18 +11,20 @@ public class binaryStrings {
             System.out.println(s);
             return;
         }
-        if(l==0 || s.charAt(l-1)=='0'){ // if this condition is true then both 1 and 0 will be called
+//        we will add new digits at the end of the string
+        if(l==0 || s.charAt(l-1)=='0'){ // if last digit is 0 we can add both 0 and 1 to the string
             printStrings(s+1,n); //pass by value
             printStrings(s+0,n); //pass by value
         }
-        else{ //else only 0 will be called bcz consecutive 1s are not allowed
+        else{ //if the last digit of the string is 1, we will add only 0.
             printStrings(s+0,n);
         }
-        //to find all possible combinations just remove conditions and call both 1 amd o always
+        //to find all possible combinations, just remove conditions and call both 1 and 0 always
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter the n: ");
         int n = in.nextInt();
         printStrings("",n);
     }

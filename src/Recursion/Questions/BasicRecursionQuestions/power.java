@@ -9,13 +9,33 @@ public class power {
         //Time Complexity = O(b);
     }
 
+    //Better Approach
     public static int powerLog(int a,int b){
         if(b==0) return 1;
-        int ans = powerLog(a,b-1);
-        if(b%2==0) return ans*ans;
-        else return ans*ans*a;
+        int ans = powerLog(a,b/2);
+        if(b%2==0) return ans*ans; //for even power
+        else return ans*ans*a; //for odd power
 
         // TC = O(log b)
+    }
+
+    //To handle negative power too
+    public double myPow(double x, int n) {
+        return binaryExp(x, (long) n);
+    }
+
+    private double binaryExp(double x, long n) {
+        if (n == 0) {
+            return 1;
+        }
+        if (n < 0) {
+            return 1.0 / binaryExp(x, -n);
+        }
+        if (n % 2 == 1) {
+            return x * binaryExp(x * x, (n - 1) / 2);
+        } else {
+            return binaryExp(x * x, n / 2);
+        }
     }
 
     public static void main(String[] args){
