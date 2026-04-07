@@ -18,4 +18,7 @@ public class LongestCommonPrefix {
         }
         return strs[0]; //All characters matched
     }
+
+    //Simpler Approach
+
 }
