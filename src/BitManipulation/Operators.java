@@ -9,7 +9,9 @@ public class Operators {
 
         System.out.println(91<<2); //int -> 2nd case
 
-        //Jitna Left Shift kroge utne end m 0s lag jayenge
+
+
+//        a << 1 means multiply by 2, a left shift 1, means a*2^1
 
 //        PROPERTIES OF XOR
 //        IMPORTANT (x is a number not a bit)

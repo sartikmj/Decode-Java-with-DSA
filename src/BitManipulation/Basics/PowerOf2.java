@@ -11,7 +11,7 @@ public class PowerOf2 {
         // a^b = a*a^b-1 -> Recursive O(n)
         // a^b = a^b/2 * a^b/2 * a -> Binary Exponentiation O(nlogn)
 
-        //2^n has a speciality that there is only one 1 in left most bit all other are 0s
+        //2^n has a speciality that there is only one 1 in left most bit all others are 0s
         //So we can just left shift and we will get raise to the power 2
         //O(1)
 
