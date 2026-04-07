@@ -18,7 +18,7 @@ public class ShortestJobFirst {
             waitingTime += process[i-1]; //every process waits for the prev process
             totalTime += waitingTime; //sum of all waiting time
         }
-        return totalTime/process.length;
+        return totalTime/process.length; //if return type is int thats fine otherwise u have to take care of the decimal values and in that case use double
     }
 
     public static void main(String[] args) {
