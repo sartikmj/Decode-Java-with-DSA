@@ -11,6 +11,10 @@ public class JumpGame2 {
     //we will maintain a range with pointers left and right, right is the farthest we can jump with the ele of our range,
     //and l is the closest we can jump with our range
 
+    //Instead of specific index we are tracking ranges in which we can reach from specific point, farthest of the range
+    // closest of the range
+
+    // Greedy bcz we are trying to reach the farthest
     public int jump(int[] nums) {
         int jumps = 0;
         int l=0,r=0;
@@ -44,7 +48,7 @@ public class JumpGame2 {
     }
 
     public int jumpDP(int[] nums) {
-        int[][] dp = new int[nums.length][nums.length];
+        int[][] dp = new int[nums.length][nums.length]; // [index][jumps]
         for(int[] i : dp){
             Arrays.fill(i,-1);
         }

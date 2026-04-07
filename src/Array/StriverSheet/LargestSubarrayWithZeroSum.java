@@ -39,7 +39,7 @@ public class LargestSubarrayWithZeroSum {
                 maxLen = Math.max(maxLen,len);
             }
             else{
-                map.put(sum,i);
+                map.put(sum,i); // We only store the first occurrence because we want the longest possible subarray, so later encounters give longer distances.
             }
         }
 
