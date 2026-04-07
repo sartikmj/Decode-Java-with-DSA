@@ -21,7 +21,7 @@ public class LargestSubarrayWithZeroSum {
     }
 
     //Optimal
-//    TC=O(nlogn) SC=O(n)
+//    TC=O(n) SC=O(n)
     int maxLength(int arr[]) {
         // code here
         int n = arr.length;
