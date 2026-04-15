@@ -21,7 +21,7 @@ public class FinallyBlock {
         }
 
         // we also use try and finally block without catch block
-//        -> in case we want to do something and if any mishappening happend at least the resource is closed.
+//        -> in case we want to do something and if any happening happens at least the resource is closed.
 
         Scanner scc = new Scanner(System.in);
         int num2 = 0;
