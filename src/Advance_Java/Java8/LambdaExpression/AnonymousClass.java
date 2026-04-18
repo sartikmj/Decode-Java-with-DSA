@@ -21,7 +21,8 @@ public class AnonymousClass {
         Car obj = new Car()
         { //This is called an Anonymous Inner Class.
             //Implementing the Interface -> we have to define all the abstract methods that are inside the interface
-            //we can create an object of an anonymous class that implements the interface. That object is technically an instance of the anonymous class, not of the interface itself.
+            //we can create an object of an anonymous class that implements the interface.
+            // That object is technically an instance of the anonymous class, not of the interface itself.
             @Override
             public void drive(int avg) {
                 //defining the method in the Interface
