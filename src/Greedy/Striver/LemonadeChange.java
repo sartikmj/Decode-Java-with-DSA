@@ -1,0 +1,67 @@
+package Greedy.Striver;
+
+//leetcode 860
+public class LemonadeChange {
+
+    //TC=O(n)
+    public boolean lemonadeChange(int[] bills) {
+        int five = 0;
+        int ten = 0;
+
+        for(int i=0;i<bills.length;i++){
+            if(bills[i]==5) five++;
+            else if(bills[i]==10){
+                if(five!=0){ //you have five
+                    five--;
+                    ten++;
+                }
+                else return false;
+            }
+            else{ // bills[i]==20
+                if(ten!=0 && five!=0){
+                    ten--;
+                    five--;
+                }
+                else if(five>=3){
+                    five-=3;
+                }
+                else return false;
+            }
+        }
+        return true;
+    }
+
+    //My Solution
+    public boolean lemonadeChangeMy(int[] bills) {
+
+        int n = bills.length;
+
+        int five = 0;
+        int ten = 0;
+
+        for(int i=0;i<n;i++){
+
+            if(bills[i]==5) five++;
+
+            else if(bills[i]==10){
+                if(five>0){
+                    ten++;
+                    five--;
+                }
+                else return false;
+            }
+
+            else if(bills[i]==20){
+                if(ten>0 && five>0){ // greedy choice choose 10 + 5 before 5+5+5
+                    ten--;
+                    five--;
+                }
+                else if(five>=3){
+                    five-=3;
+                }
+                else return false;
+            }
+        }
+        return true;
+    }
+}
